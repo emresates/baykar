@@ -13,3 +13,36 @@
     font-family: var(--font-roboto);
   }
 }
+
+svg text {
+  animation: stroke 2s infinite alternate;
+  stroke-width: 2;
+  stroke: #365fa0;
+  font-size: 100px;
+}
+
+@keyframes stroke {
+  0% {
+    fill: rgba(255, 255, 255, 0);
+    stroke: rgba(120, 53, 15, 1);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(255, 255, 255, 0);
+    stroke: rgba(120, 53, 15, 1);
+  }
+  80% {
+    fill: rgba(255, 255, 255, 0);
+    stroke: rgba(120, 53, 15, 1);
+    stroke-width: 3;
+  }
+  100% {
+    fill: rgba(120, 53, 15, 1);
+    stroke: rgba(255, 255, 255, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
