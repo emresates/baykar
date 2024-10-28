@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import Navbar from "./_components/Navbar";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -20,7 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body className={`${roboto.className} text-primary`}>{children}</body>
+      <body
+        className={`${roboto.className} text-primary`}
+        style={{
+          background: "linear-gradient(180deg, #FFFBEB 0%, #FFFFFF 89.63%)",
+        }}
+      >
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
