@@ -6,6 +6,7 @@ import HeroSection from "./_components/Hero";
 import Join from "./_components/Join";
 import SwiperSection from "./_components/Swiper";
 import TheBest from "./_components/TheBest";
+import World from "./_components/World";
 
 export default function Home() {
   // const [loading, setLoading] = useState(true);
@@ -28,6 +29,8 @@ export default function Home() {
       <TheBest />
       <Join />
       <SwiperSection />
+      {/* ara */}
+      <World />
     </div>
   );
 }

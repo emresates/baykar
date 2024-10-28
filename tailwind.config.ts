@@ -50,6 +50,11 @@ const config: Config = {
         "11xl": "10rem",
       },
       fontSize: {
+        "heading-1-l": [
+          "6rem", // 96px
+          { lineHeight: "105.6px", letterSpacing: "-0.02em" },
+        ],
+
         "heading-1-m": [
           "4.5rem", // 72px
           { lineHeight: "79.2px", letterSpacing: "-0.02em" },

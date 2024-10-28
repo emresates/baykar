@@ -21,7 +21,7 @@ const SwiperSection = () => {
     }
   };
   return (
-    <div className="space-y-20 p-20 relative">
+    <div className="space-y-20 p-20 relative overflow-hidden">
       <div className="flex items-center justify-between">
         <h1 className="text-heading-2 font-extrabold">Because they love us</h1>
 
