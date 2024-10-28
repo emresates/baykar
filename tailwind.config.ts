@@ -87,6 +87,9 @@ const config: Config = {
         secondary: {
           DEFAULT: "rgba(120, 53, 15, 1)",
         },
+        gray: {
+          DEFAULT: "#475569",
+        },
       },
     },
   },

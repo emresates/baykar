@@ -4,6 +4,7 @@
 
 import HeroSection from "./_components/Hero";
 import Join from "./_components/Join";
+import SwiperSection from "./_components/Swiper";
 import TheBest from "./_components/TheBest";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       <HeroSection />
       <TheBest />
       <Join />
+      <SwiperSection />
     </div>
   );
 }

@@ -46,3 +46,10 @@ svg text {
     stroke-width: 0;
   }
 }
+
+.slick-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
