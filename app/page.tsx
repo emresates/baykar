@@ -3,6 +3,7 @@
 // import Loading from "./loading";
 
 import HeroSection from "./_components/Hero";
+import Join from "./_components/Join";
 import TheBest from "./_components/TheBest";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
     <div className="">
       <HeroSection />
       <TheBest />
+      <Join />
     </div>
   );
 }
