@@ -82,7 +82,7 @@ const config: Config = {
       },
       colors: {
         primary: {
-          DEFAULT: "rgba(15, 23, 42, 1)",
+          DEFAULT: "#0F172A",
         },
         secondary: {
           DEFAULT: "rgba(120, 53, 15, 1)",

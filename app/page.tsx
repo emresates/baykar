@@ -3,6 +3,7 @@
 // import Loading from "./loading";
 
 import HeroSection from "./_components/Hero";
+import TheBest from "./_components/TheBest";
 
 export default function Home() {
   // const [loading, setLoading] = useState(true);
@@ -22,6 +23,7 @@ export default function Home() {
   return (
     <div className="">
       <HeroSection />
+      <TheBest />
     </div>
   );
 }

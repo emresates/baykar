@@ -38,8 +38,8 @@ const Button = ({ onClick, children, color, size, className }: ButtonProps) => {
       className={cn(
         colorType,
         sizeType,
-        className,
-        "rounded-lg border-2 text-md font-medium transition-all hover:shadow-lg active:shadow-none"
+        "rounded-lg border-2 text-md font-medium transition-all hover:shadow-lg active:shadow-none",
+        className
       )}
     >
       {children}
