@@ -70,7 +70,7 @@ export default function World() {
     event: React.MouseEvent<SVGElement, MouseEvent>
   ) => {
     // Tooltip konumunu belirle
-    const tooltipYPosition = event.clientY - 20; // Tooltip'i markerın üstünde göstermek için
+    const tooltipYPosition = event.clientY - 10; // Tooltip'i markerın üstünde göstermek için
     if (mapRef.current) {
       const containerRect = mapRef.current.getBoundingClientRect();
       setTooltipContent({
@@ -88,26 +88,31 @@ export default function World() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<HTMLDivElement | null>(null);
 
+  const isMobile = window.innerWidth < 768;
+  console.log("isMobile", isMobile);
+
   return (
     <div
       ref={mapRef}
-      className="relative flex h-[700px] items-center justify-center bg-[#78350F] px-[180px] py-20 text-white"
+      className="relative flex h-[700px] items-center justify-center bg-[#78350F] text-white desktop:px-[180px] desktop:py-20"
     >
       <div
         ref={containerRef}
         className="pointer-events-none absolute z-10 text-center"
       >
-        <h1 className="text-heading-1-l font-extrabold">
+        <h1 className="text-heading-3 font-extrabold desktop:text-heading-1-l">
           <AnimatedNumber ref={containerRef} targetNumber={11658467} />
         </h1>
 
-        <h2 className="text-heading-2 font-extrabold">Shoes Collected</h2>
+        <h2 className="text-heading-5 font-extrabold desktop:text-heading-2">
+          Shoes Collected
+        </h2>
       </div>
 
       <ComposableMap
         projectionConfig={{
-          scale: 150,
-          center: [0, 40], // Haritanın merkezini belirler. 0: enlem, 20: boylam.
+          scale: isMobile ? 350 : 150,
+          center: isMobile ? [-120, 40] : [0, 40], // Haritanın merkezini belirler. 0: enlem, 20: boylam.
         }}
         className="h-full w-full"
         projection="geoMercator"
@@ -121,7 +126,7 @@ export default function World() {
             onMouseLeave={handleMouseLeave}
           >
             <circle
-              r={7}
+              r={isMobile ? 10 : 7}
               fill="transparent"
               stroke="#A3E635"
               strokeWidth={2}
@@ -166,7 +171,7 @@ export default function World() {
             alt="shoe"
             width={250}
             height={200}
-            className="h-[200px] w-[250px] rounded-t-[10px] border-[5px] border-white object-cover"
+            className="max-h-[200px] min-h-[200px] min-w-[250px] max-w-[250px] rounded-t-[10px] border-[5px] border-white object-cover"
           />
           <p className="max-w-[250px] rounded-b-[10px] bg-gray-100 px-4 pb-2 pt-4 text-sm">
             {tooltipContent.content}

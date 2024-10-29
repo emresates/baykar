@@ -65,6 +65,11 @@ const config: Config = {
           { lineHeight: "61.6px", letterSpacing: "-0.02em" },
         ],
 
+        "heading-3": [
+          "3rem", // 48px
+          { lineHeight: "52.8px", letterSpacing: "-0.02em" },
+        ],
+
         "heading-5": [
           "2rem", // 32px
           { lineHeight: "35.2px", letterSpacing: "-0.02em" },
@@ -94,7 +99,7 @@ const config: Config = {
         },
         gray: {
           DEFAULT: "#475569",
-          100: "#E2E8F0"
+          100: "#E2E8F0",
         },
       },
     },

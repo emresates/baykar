@@ -125,7 +125,7 @@ const Collection = () => {
             alt="image"
             width={250}
             height={280}
-            className="absolute -right-20 bottom-5 max-h-[105px] max-w-[95px] rounded-[10px] border-[5px] border-white object-fill desktop:-right-32 desktop:bottom-0 desktop:max-h-[280px] desktop:max-w-[250px]"
+            className="absolute -right-14 bottom-5 max-h-[105px] max-w-[95px] rounded-[10px] border-[5px] border-white object-fill desktop:-right-32 desktop:bottom-0 desktop:max-h-[280px] desktop:max-w-[250px]"
           />
         </div>
       </div>
