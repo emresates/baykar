@@ -16,7 +16,7 @@ const Card = ({ title, description, image }: CardProps) => {
         alt={title}
         width={472}
         height={220}
-        className="h-[220px] 2xl:h-[220px] 2xl:w-full"
+        className="h-[220px] 2xl:h-[220px] w-full"
       />
       <div className="w-full space-y-4 p-8">
         <h2 className="text-xxl font-bold">{title}</h2>

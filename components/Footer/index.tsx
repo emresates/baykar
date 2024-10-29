@@ -107,16 +107,20 @@ const Footer = () => {
   const [activeLanguage, setActiveLanguage] = React.useState("EN");
 
   return (
-    <div className="h-[464px] bg-primary px-20 text-white">
-      <div className="flex items-start gap-12 border-b py-12 justify-between">
+    <div className="bg-primary px-4 text-white desktop:h-[464px] desktop:px-20">
+      <div className="flex flex-col items-start justify-between gap-12 border-b py-12 desktop:flex-row">
         {footerData.map((data, index) => (
-          <div key={index} className="flex min-w-[284px] flex-col">
-            <h1 className="py-3 text-md font-medium">
+          <div key={index} className="flex w-full 2xl:min-w-[284px] flex-col">
+            <h1 className="py-3 text-center text-md font-medium desktop:text-left">
               {activeLanguage === "EN" ? data.titleEN : data.titleTR}
             </h1>
             <div className="flex flex-col">
               {data.subtitles.map((subtitle, index) => (
-                <Link key={index} href={subtitle.link} className="py-3 text-md">
+                <Link
+                  key={index}
+                  href={subtitle.link}
+                  className="py-3 text-center text-md desktop:text-left"
+                >
                   {activeLanguage === "EN"
                     ? subtitle.titleEN
                     : subtitle.titleTR}
@@ -125,7 +129,7 @@ const Footer = () => {
             </div>
           </div>
         ))}
-        <div className="space-y-2">
+        <div className="flex w-full flex-col items-center space-y-2 desktop:items-start">
           <h2 className="py-3 text-md font-medium">
             {activeLanguage === "EN" ? "Get the App" : "Uygulamayı İndir"}
           </h2>
@@ -186,17 +190,22 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between gap-12 py-6">
-        <p className="w-full text-md">Collers @ 2023. All rights reserved.</p>
+      <div className="flex flex-col items-center justify-between gap-12 py-6 desktop:flex-row">
+        <p className="w-full text-center text-md desktop:text-left">
+          Collers @ 2023.{" "}
+          {activeLanguage === "EN"
+            ? "All rights reserved."
+            : "Tüm hakları saklıdır."}
+        </p>
         <div className="flex items-center gap-8">
           <Link href="#" className="text-md">
-            Terms
+            {activeLanguage === "EN" ? "Terms" : "Şartlar"}
           </Link>
           <Link href="#" className="text-md">
-            Privacy
+            {activeLanguage === "EN" ? "Privacy" : "Gizlilik"}
           </Link>
           <Link href="#" className="text-md">
-            Contact
+            {activeLanguage === "EN" ? "Contact" : "İletişim"}
           </Link>
           <Select
             data={[

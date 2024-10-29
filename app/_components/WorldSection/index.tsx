@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ComposableMap, Marker } from "react-simple-maps";
 import "tailwindcss/tailwind.css";
 import WorldMap from "./WorldMap";
@@ -88,8 +88,12 @@ export default function World() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<HTMLDivElement | null>(null);
 
-  const isMobile = window.innerWidth < 768;
-  console.log("isMobile", isMobile);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+  }, []);
 
   return (
     <div

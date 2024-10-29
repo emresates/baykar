@@ -7,56 +7,37 @@ const Collection = () => {
     {
       button: "Bibendum tellus",
       icon: "/images/collection/first.svg",
-      images: [
-        "/images/collection/collectionback.png",
-        "/images/collection/collectionfront.png",
-        "/images/collection/collectionsmall.jpeg",
-      ],
+      images: ["/images/collection/images.png"],
+      // images: [
+      //   "/images/collection/collectionback.png",
+      //   "/images/collection/collectionfront.png",
+      //   "/images/collection/collectionsmall.jpeg",
+      // ],
     },
     {
       button: "Cras eget",
       icon: "/images/collection/second.svg",
-      images: [
-        "/images/collection/collectionfront.png",
-        "/images/collection/collectionback.png",
-        "/images/collection/collectionsmall.jpeg",
-      ],
+      images: ["/images/collection/images.png"],
     },
     {
       button: "Dolor pharetra",
       icon: "/images/collection/third.svg",
-      images: [
-        "/images/collection/collectionback.png",
-        "/images/collection/collectionfront.png",
-        "/images/collection/collectionsmall.jpeg",
-      ],
+      images: ["/images/collection/images.png"],
     },
     {
       button: "Amet, fringilla",
       icon: "/images/collection/fourth.svg",
-      images: [
-        "/images/collection/collectionfront.png",
-        "/images/collection/collectionback.png",
-        "/images/collection/collectionsmall.jpeg",
-      ],
+      images: ["/images/collection/images.png"],
     },
     {
       button: "Amet nibh",
       icon: "/images/collection/fifth.svg",
-      images: [
-        "/images/collection/collectionback.png",
-        "/images/collection/collectionfront.png",
-        "/images/collection/collectionsmall.jpeg",
-      ],
+      images: ["/images/collection/images.png"],
     },
     {
       button: "Sed velit",
       icon: "/images/collection/sixth.svg",
-      images: [
-        "/images/collection/collectionfront.png",
-        "/images/collection/collectionback.png",
-        "/images/collection/collectionsmall.jpeg",
-      ],
+      images: ["/images/collection/images.png"],
     },
   ];
 
@@ -69,7 +50,7 @@ const Collection = () => {
         alt="collection"
         width={1000}
         height={1000}
-        className="pointer-events-none absolute bottom-0 right-0 h-fit w-full"
+        className="pointer-events-none absolute -bottom-1 right-0 z-[-1] h-fit w-full"
       />
       <div className="space-y-8">
         <h1 className="text-center text-heading-5 font-extrabold desktop:text-left desktop:text-heading-2">
@@ -82,8 +63,8 @@ const Collection = () => {
           proin neque placerat at bibendum quam tellus.
         </p>
       </div>
-      <div className="mt-8 flex flex-col items-start gap-x-20 desktop:mt-0 desktop:h-[550px] desktop:flex-row desktop:justify-between 2xl:pr-40">
-        <div className="customScrollbar flex w-full items-center gap-x-4 overflow-auto px-4 pb-4 desktop:block desktop:w-[240px] desktop:overflow-hidden desktop:px-0 desktop:pb-0">
+      <div className="z-10 mt-8 flex flex-col items-center desktop:items-start gap-x-20 desktop:mt-0 desktop:h-[550px] desktop:flex-row desktop:justify-between">
+        <div className="customScrollbar flex w-full items-center gap-x-4 overflow-auto px-4 pb-4 desktop:block desktop:w-[240px] desktop:min-w-[240px] desktop:overflow-hidden desktop:px-0 desktop:pb-0">
           {data?.map((item, index) => (
             <button
               key={index}
@@ -105,29 +86,37 @@ const Collection = () => {
             </button>
           ))}
         </div>
-        <div className="relative">
-          <Image
+        {/* <Image
             src={data[active].images[0]}
             alt="image"
             width={760}
             height={450}
-            className="max-h-[200px] min-h-[200px] min-w-[300px] max-w-[300px] rounded-[20px] desktop:max-h-[450px] desktop:min-h-[450px] desktop:min-w-[760px] desktop:max-w-[760px]"
+            className="max-h-[200px] min-h-[200px] min-w-[300px] max-w-[300px] rounded-[20px] mobile:max-h-[350px] mobile:min-h-[350px] mobile:min-w-[600px] mobile:max-w-[600px] desktop:max-h-[450px] desktop:min-h-[450px] desktop:min-w-[760px] desktop:max-w-[760px]"
           />
+
           <Image
             src={data[active].images[1]}
             alt="image"
             width={760}
             height={450}
-            className="absolute left-8 top-8 max-h-[200px] min-h-[200px] min-w-[300px] max-w-[300px] rounded-[20px] desktop:left-24 desktop:top-24 desktop:max-h-[450px] desktop:min-h-[450px] desktop:min-w-[760px] desktop:max-w-[760px]"
+            className="absolute left-8 top-8 max-h-[200px] min-h-[200px] min-w-[300px] max-w-[300px] rounded-[20px] mobile:max-h-[350px] mobile:min-h-[350px] mobile:min-w-[600px] mobile:max-w-[600px] desktop:left-24 desktop:top-24 desktop:max-h-[450px] desktop:min-h-[450px] desktop:min-w-[760px] desktop:max-w-[760px]"
           />
+
           <Image
             src={data[active].images[2]}
             alt="image"
             width={250}
             height={280}
-            className="absolute -right-14 bottom-5 max-h-[105px] max-w-[95px] rounded-[10px] border-[5px] border-white object-fill desktop:-right-32 desktop:bottom-0 desktop:max-h-[280px] desktop:max-w-[250px]"
-          />
-        </div>
+            className="absolute -right-14 bottom-5 max-h-[105px] max-w-[95px] rounded-[10px] border-[5px] border-white object-fill mobile:-right-20 mobile:bottom-10 mobile:max-h-[160px] mobile:max-w-[140px] desktop:-right-32 desktop:bottom-0 desktop:max-h-[280px] desktop:max-w-[250px]"
+          /> */}
+
+        <Image
+          src={data[active].images[0]}
+          alt="image"
+          width={760}
+          height={450}
+          className="h-fit mobile:h-[500px] w-[600px] object-contain xl:h-[556px] xl:w-[944px]"
+        />
       </div>
     </div>
   );
