@@ -4,7 +4,7 @@ import { ComposableMap, Marker } from "react-simple-maps";
 import "tailwindcss/tailwind.css";
 import WorldMap from "./WorldMap";
 import Image from "next/image";
-import AnimatedNumber from "./AnimatedNumber";
+import AnimatedNumber from "../../../components/shared/AnimatedNumber";
 
 const markers = [
   {

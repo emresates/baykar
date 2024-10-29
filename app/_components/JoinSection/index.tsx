@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Button from "../shared/button";
+import Button from "../../../components/shared/button";
 
 const Join = () => {
   const listData = [

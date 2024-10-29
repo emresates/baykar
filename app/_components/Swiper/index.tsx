@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import Button from "../shared/button";
+import Button from "../../../components/shared/button";
 import Image from "next/image";
 import SwiperContent from "./SwiperContent";
 
