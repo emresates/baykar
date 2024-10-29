@@ -80,7 +80,7 @@ const Collection = () => {
           proin neque placerat at bibendum quam tellus.
         </p>
       </div>
-      <div className="flex h-[550px] items-start gap-x-20">
+      <div className="flex h-[550px] items-start justify-between gap-x-20 2xl:pr-40">
         <div className="w-[240px]">
           {data?.map((item, index) => (
             <button

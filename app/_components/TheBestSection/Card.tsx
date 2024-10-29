@@ -10,8 +10,14 @@ type CardProps = {
 
 const Card = ({ title, description, image }: CardProps) => {
   return (
-    <div className="z-10 h-[472px] overflow-hidden rounded-[10px] border border-primary bg-primary shadow-2xl shadow-white/25">
-      <Image src={image} alt={title} width={472} height={220} />
+    <div className="z-10 h-[472px] overflow-hidden rounded-[10px] border border-primary bg-primary shadow-2xl shadow-white/25 2xl:h-[500px]">
+      <Image
+        src={image}
+        alt={title}
+        width={472}
+        height={220}
+        className="2xl:h-[220px] 2xl:w-full"
+      />
       <div className="w-full space-y-4 p-8">
         <h2 className="text-xxl font-bold">{title}</h2>
         <p className="text-lg">{description}</p>

@@ -108,7 +108,7 @@ const Footer = () => {
 
   return (
     <div className="h-[464px] bg-primary px-20 text-white">
-      <div className="flex items-start gap-12 border-b py-12">
+      <div className="flex items-start gap-12 border-b py-12 justify-between">
         {footerData.map((data, index) => (
           <div key={index} className="flex min-w-[284px] flex-col">
             <h1 className="py-3 text-md font-medium">

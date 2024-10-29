@@ -70,22 +70,29 @@ export default function World() {
     event: React.MouseEvent<SVGElement, MouseEvent>
   ) => {
     // Tooltip konumunu belirle
-    const tooltipYPosition = event.clientY - 340; // Tooltip'i markerın üstünde göstermek için
-    setTooltipContent({
-      content: name,
-      x: event.clientX,
-      y: tooltipYPosition,
-      visible: true,
-    });
+    const tooltipYPosition = event.clientY - 20; // Tooltip'i markerın üstünde göstermek için
+    if (mapRef.current) {
+      const containerRect = mapRef.current.getBoundingClientRect();
+      setTooltipContent({
+        content: name,
+        x: event.clientX - containerRect.left,
+        y: tooltipYPosition - containerRect.top,
+        visible: true,
+      });
+    }
   };
 
   const handleMouseLeave = () => {
     setTooltipContent({ content: "", x: 0, y: 0, visible: false });
   };
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const mapRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className="relative flex h-[700px] items-center justify-center bg-[#78350F] px-[180px] py-20 text-white">
+    <div
+      ref={mapRef}
+      className="relative flex h-[700px] items-center justify-center bg-[#78350F] px-[180px] py-20 text-white"
+    >
       <div
         ref={containerRef}
         className="pointer-events-none absolute z-10 text-center"
