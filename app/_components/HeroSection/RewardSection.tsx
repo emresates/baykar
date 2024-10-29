@@ -26,9 +26,12 @@ const RewardSection = () => {
     },
   ];
   return (
-    <div className="flex w-full items-center justify-between space-x-20 pt-20">
+    <div className="flex w-full flex-col items-center justify-between gap-y-8 desktop:flex-row pb-4 desktop:pb-0 desktop:space-x-20 pt-20 px-4 ">
       {rewardsData.map((item, index) => (
-        <div key={index} className="space-y-4">
+        <div
+          key={index}
+          className="flex flex-col items-center justify-center space-y-4 desktop:block"
+        >
           <div className="relative h-16 w-16">
             <Image src={item.icon} alt="icon" width={64} height={64} />
             <Image
@@ -40,7 +43,9 @@ const RewardSection = () => {
             />
           </div>
           <p className="text-xl font-medium">{item.title}</p>
-          <p className="text-lg">{item.description}</p>
+          <p className="text-center text-lg desktop:text-left">
+            {item.description}
+          </p>
         </div>
       ))}
     </div>

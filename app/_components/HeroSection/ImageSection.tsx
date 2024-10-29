@@ -4,20 +4,20 @@ import Image from "next/image";
 
 const ImageSection = () => {
   return (
-    <div className="z-10 flex items-center justify-between gap-20 pb-20">
+    <div className="z-10 flex flex-col items-center justify-between px-4 pb-10 desktop:flex-row desktop:gap-20 desktop:pb-20">
       <div className="space-y-12">
-        <h1 className="text-heading-1-m font-extrabold">
+        <h1 className="text-center text-heading-2 font-extrabold desktop:text-left desktop:text-heading-1-m">
           Collectible Sneakers
         </h1>
-        <h1 className="text-lg">
+        <h1 className="text-center text-lg desktop:text-left">
           Sit elit feugiat turpis sed integer integer accumsan turpis. Sed
           suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices
           amet.
         </h1>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-center gap-4 desktop:justify-start">
           <Button
             size="lg"
-            className="h-[56px] w-[179px] p-0 text-xl font-medium"
+            className="h-[56px] w-[179px] p-0 text-lg font-medium desktop:text-xl"
           >
             Sing up now
           </Button>
@@ -33,15 +33,15 @@ const ImageSection = () => {
         </div>
       </div>
 
-      <div className="flex h-[423px] min-w-[486px] items-end justify-center">
-        <div className="flex h-[372px] w-[367px] items-center justify-center rounded-[50px] bg-[#FBBF24]">
+      <div className="flex h-[314px] min-w-[360px] items-end justify-center desktop:h-[423px] desktop:min-w-[486px]">
+        <div className="flex h-[272px] w-[276px] items-center justify-center rounded-[50px] bg-[#FBBF24] desktop:h-[372px] desktop:w-[367px]">
           <Image
             src="/images/hero/shoe.png"
             alt="shoe"
             width={486}
             height={388}
             sizes="100vw"
-            className="absolute h-[388px] w-[486px] object-fill"
+            className="absolute h-[288px] w-[361px] object-fill desktop:h-[388px] desktop:w-[486px]"
           />
         </div>
       </div>
