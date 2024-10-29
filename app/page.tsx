@@ -2,11 +2,12 @@
 // import { useState, useEffect } from "react";
 // import Loading from "./loading";
 
-import HeroSection from "./_components/Hero";
-import Join from "./_components/Join";
+import Collection from "./_components/Collection";
+import HeroSection from "./_components/HeroSection";
+import Join from "./_components/JoinSection";
 import SwiperSection from "./_components/Swiper";
-import TheBest from "./_components/TheBest";
-import World from "./_components/World";
+import TheBest from "./_components/TheBestSection";
+import World from "./_components/WorldSection";
 
 export default function Home() {
   // const [loading, setLoading] = useState(true);
@@ -29,7 +30,7 @@ export default function Home() {
       <TheBest />
       <Join />
       <SwiperSection />
-      {/* ara */}
+      <Collection />
       <World />
     </div>
   );
