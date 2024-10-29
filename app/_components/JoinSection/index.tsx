@@ -9,13 +9,18 @@ const Join = () => {
     "Ullamcorper ornare in et egestas dolor orci.",
   ];
   return (
-    <div className="relative px-20 py-40">
-      <div className="flex items-center justify-between gap-20 rounded-[30px] bg-white p-20 shadow-lg">
-        <div className="space-y-6">
-          <h1 className="text-heading-2 font-extrabold">Why join us</h1>
+    <div className="relative px-4 pb-14 pt-4 desktop:px-20 desktop:py-40">
+      <div className="flex flex-col items-center justify-between gap-8 rounded-[30px] bg-white px-4 py-8 shadow-lg desktop:flex-row desktop:gap-20 desktop:p-20">
+        <div className="z-10 space-y-6">
+          <h1 className="text-center text-heading-5 font-extrabold desktop:text-left desktop:text-heading-2">
+            Why join us
+          </h1>
           <div>
             {listData.map((item, index) => (
-              <p key={index} className="flex items-center space-x-4 text-xl">
+              <p
+                key={index}
+                className="flex items-start space-x-4 text-md desktop:text-xl"
+              >
                 <Image
                   src="/images/join/check.svg"
                   alt="check"
@@ -26,7 +31,11 @@ const Join = () => {
               </p>
             ))}
           </div>
-          <Button className="w-[179px]">Sign up now</Button>
+          <div className="flex items-center justify-center desktop:justify-start">
+            <Button className="w-[179px] text-lg desktop:text-md">
+              Sign up now
+            </Button>
+          </div>
         </div>
 
         <Image
@@ -34,7 +43,7 @@ const Join = () => {
           alt="check"
           width={1000}
           height={1000}
-          className="absolute bottom-1/2 right-5 z-0 h-[625px] w-[713px] translate-y-1/2 object-contain"
+          className="absolute bottom-0 right-0 z-0 h-[410px] w-full object-contain desktop:bottom-1/2 desktop:right-5 desktop:h-[625px] desktop:w-[713px] desktop:translate-y-1/2"
         />
         <div className="relative">
           <Image
@@ -42,9 +51,9 @@ const Join = () => {
             alt="check"
             width={1000}
             height={1000}
-            className="z-10 h-[350px] w-[520px]"
+            className="z-10 h-[234px] w-auto desktop:h-[350px] desktop:w-[520px]"
           />
-          <div className="aspect-square w-[85px] rounded-full bg-[#15803D]/50 absolute bottom-0 left-20"></div>
+          <div className="absolute bottom-3 desktop:bottom-0 left-14 desktop:left-20 aspect-square w-12 desktop:w-[85px] rounded-full bg-[#15803D]/50"></div>
         </div>
       </div>
     </div>
