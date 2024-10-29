@@ -7,37 +7,37 @@ const Collection = () => {
     {
       button: "Bibendum tellus",
       icon: "/images/collection/first.svg",
-      images: ["/images/collection/images.png"],
+      images: ["/images/collection/images.webp"],
       // images: [
-      //   "/images/collection/collectionback.png",
-      //   "/images/collection/collectionfront.png",
+      //   "/images/collection/collectionback.webp",
+      //   "/images/collection/collectionfront.webp",
       //   "/images/collection/collectionsmall.jpeg",
       // ],
     },
     {
       button: "Cras eget",
       icon: "/images/collection/second.svg",
-      images: ["/images/collection/images.png"],
+      images: ["/images/collection/images.webp"],
     },
     {
       button: "Dolor pharetra",
       icon: "/images/collection/third.svg",
-      images: ["/images/collection/images.png"],
+      images: ["/images/collection/images.webp"],
     },
     {
       button: "Amet, fringilla",
       icon: "/images/collection/fourth.svg",
-      images: ["/images/collection/images.png"],
+      images: ["/images/collection/images.webp"],
     },
     {
       button: "Amet nibh",
       icon: "/images/collection/fifth.svg",
-      images: ["/images/collection/images.png"],
+      images: ["/images/collection/images.webp"],
     },
     {
       button: "Sed velit",
       icon: "/images/collection/sixth.svg",
-      images: ["/images/collection/images.png"],
+      images: ["/images/collection/images.webp"],
     },
   ];
 

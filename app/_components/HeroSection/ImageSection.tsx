@@ -36,7 +36,7 @@ const ImageSection = () => {
       <div className="flex h-[314px] min-w-[360px] items-end justify-center desktop:h-[423px] desktop:min-w-[486px]">
         <div className="flex h-[272px] w-[276px] items-center justify-center rounded-[50px] bg-[#FBBF24] desktop:h-[372px] desktop:w-[367px]">
           <Image
-            src="/images/hero/shoe.png"
+            src="/images/hero/shoe.webp"
             alt="shoe"
             width={486}
             height={388}

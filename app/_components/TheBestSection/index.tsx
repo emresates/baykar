@@ -9,19 +9,19 @@ const TheBest = () => {
       title: "Title-1",
       description:
         "Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.",
-      image: "/images/best/card-1.png",
+      image: "/images/best/card-1.webp",
     },
     {
       title: "Title-2",
       description:
         "Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.",
-      image: "/images/best/card-2.png",
+      image: "/images/best/card-2.webp",
     },
     {
       title: "Title-3",
       description:
         "Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.",
-      image: "/images/best/card-3.png",
+      image: "/images/best/card-3.webp",
     },
   ];
 
@@ -39,7 +39,7 @@ const TheBest = () => {
         alt="hero"
         width={500}
         height={500}
-        className="absolute top-60 left-0 z-0 h-[calc(100%-240px)] w-full object-contain desktop:hidden"
+        className="absolute left-0 top-60 z-0 h-[calc(100%-240px)] w-full object-contain desktop:hidden"
       />
       <div className="space-y-8 desktop:space-y-20">
         <div className="flex flex-col items-center justify-between gap-y-8 desktop:flex-row">

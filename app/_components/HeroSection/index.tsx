@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <div className="relative h-fit pt-12 desktop:py-12 desktop:p-20">
       <Image
-        src="/images/hero/herobg.png"
+        src="/images/hero/herobg.webp"
         alt="hero"
         width={1000}
         height={1080}

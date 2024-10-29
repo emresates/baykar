@@ -47,7 +47,7 @@ const Join = () => {
         />
         <div className="relative">
           <Image
-            src="/images/join/video.png"
+            src="/images/join/video.webp"
             alt="check"
             width={1000}
             height={1000}
