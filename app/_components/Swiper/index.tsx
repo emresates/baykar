@@ -21,11 +21,13 @@ const SwiperSection = () => {
     }
   };
   return (
-    <div className="space-y-20 p-20 relative overflow-hidden">
+    <div className="relative space-y-8 overflow-hidden py-12 px-4 desktop:p-20 desktop:space-y-20">
       <div className="flex items-center justify-between">
-        <h1 className="text-heading-2 font-extrabold">Because they love us</h1>
+        <h1 className="text-heading-5 font-extrabold desktop:text-heading-2">
+          Because they love us
+        </h1>
 
-        <div className="space-x-6">
+        <div className="hidden space-x-6 desktop:block">
           <Button className="h-12 w-12 rounded-full" onClick={previous}>
             <Image
               src="/images/feedback/left.svg"
@@ -44,7 +46,7 @@ const SwiperSection = () => {
           </Button>
         </div>
       </div>
-      <div className="absolute left-0 h-[430px] top-24 w-full bg-[#FDE68A]"></div>
+      <div className="absolute left-0 top-24 h-[277px] w-full bg-[#FDE68A] desktop:h-[430px]"></div>
       <SwiperContent ref={sliderRef} />
     </div>
   );

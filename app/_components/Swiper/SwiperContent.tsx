@@ -57,6 +57,20 @@ const SwiperContent = ({
     infinite: true,
     slidesToShow: 3,
     speed: 500,
+    responsive: [
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
 
   return (
@@ -72,7 +86,7 @@ const SwiperContent = ({
       {slides.map((slide, index) => (
         <div
           key={index}
-          className="!h-auto max-h-[430px] min-h-[430px] min-w-[384px] select-none space-x-6 space-y-4 rounded-[20px] border bg-white p-8 shadow-lg"
+          className="!h-[300px] min-w-[320px] select-none space-y-2 rounded-[20px] border bg-white p-6 shadow-lg desktop:!h-auto desktop:max-h-[430px] desktop:min-h-[430px] desktop:min-w-[384px] desktop:space-x-6 desktop:space-y-4 desktop:p-8"
         >
           <div className="max-h-[64px]">
             <Image
@@ -84,7 +98,7 @@ const SwiperContent = ({
             />
           </div>
 
-          <p className="text-xxl">{slide.feedback}</p>
+          <p className="text-md desktop:text-xxl">{slide.feedback}</p>
           <div className="flex items-center gap-4 pt-4">
             <Image
               src={slide.image}
