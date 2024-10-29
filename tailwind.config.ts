@@ -94,6 +94,7 @@ const config: Config = {
         },
         gray: {
           DEFAULT: "#475569",
+          100: "#E2E8F0"
         },
       },
     },
