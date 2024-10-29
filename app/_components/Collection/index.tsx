@@ -63,29 +63,31 @@ const Collection = () => {
   const [active, setActive] = React.useState(0);
 
   return (
-    <div className="space-y-20 p-20 relative">
+    <div className="relative px-4 py-12 desktop:space-y-20 desktop:p-20">
       <Image
         src={"/images/collection/collectionbg.png"}
         alt="collection"
         width={1000}
         height={1000}
-        className="h-fit w-full absolute bottom-0 right-0 pointer-events-none"
+        className="pointer-events-none absolute bottom-0 right-0 h-fit w-full"
       />
       <div className="space-y-8">
-        <h1 className="text-heading-2 font-extrabold">Grow your collection</h1>
-        <p className="text-lg">
+        <h1 className="text-center text-heading-5 font-extrabold desktop:text-left desktop:text-heading-2">
+          Grow your collection
+        </h1>
+        <p className="text-center text-md desktop:text-left desktop:text-lg">
           Enim neque massa porta adipiscing elit. Sem libero id faucibus nibh
           amet dictum pellentesque sed. Eu non turpis risus odio sapien, fames
           sit rhoncus. Nec magna sed interdum sit purus tellus. Et volutpat
           proin neque placerat at bibendum quam tellus.
         </p>
       </div>
-      <div className="flex h-[550px] items-start justify-between gap-x-20 2xl:pr-40">
-        <div className="w-[240px]">
+      <div className="mt-8 flex flex-col items-start gap-x-20 desktop:mt-0 desktop:h-[550px] desktop:flex-row desktop:justify-between 2xl:pr-40">
+        <div className="customScrollbar flex w-full items-center gap-x-4 overflow-auto px-4 pb-4 desktop:block desktop:w-[240px] desktop:overflow-hidden desktop:px-0 desktop:pb-0">
           {data?.map((item, index) => (
             <button
               key={index}
-              className={`${active === index ? "rounded-lg shadow-lg" : ""} flex w-full items-center justify-between gap-4 p-4 text-lg font-medium`}
+              className={`${active === index ? "rounded-lg shadow-lg" : ""} flex w-full min-w-fit items-center justify-between gap-4 p-4 text-lg font-medium`}
               onClick={() => setActive(index)}
             >
               <p className="flex items-center gap-2">
@@ -109,21 +111,21 @@ const Collection = () => {
             alt="image"
             width={760}
             height={450}
-            className="max-h-[450px] min-h-[450px] min-w-[760px] max-w-[760px] rounded-[20px]"
+            className="max-h-[200px] min-h-[200px] min-w-[300px] max-w-[300px] rounded-[20px] desktop:max-h-[450px] desktop:min-h-[450px] desktop:min-w-[760px] desktop:max-w-[760px]"
           />
           <Image
             src={data[active].images[1]}
             alt="image"
             width={760}
             height={450}
-            className="absolute left-24 top-24 max-h-[450px] min-h-[450px] min-w-[760px] max-w-[760px] rounded-[20px]"
+            className="absolute left-8 top-8 max-h-[200px] min-h-[200px] min-w-[300px] max-w-[300px] rounded-[20px] desktop:left-24 desktop:top-24 desktop:max-h-[450px] desktop:min-h-[450px] desktop:min-w-[760px] desktop:max-w-[760px]"
           />
           <Image
             src={data[active].images[2]}
             alt="image"
             width={250}
             height={280}
-            className="absolute -right-32 bottom-0 max-h-[280px] max-w-[250px] rounded-[10px] border-[5px] border-white object-fill"
+            className="absolute -right-20 bottom-5 max-h-[105px] max-w-[95px] rounded-[10px] border-[5px] border-white object-fill desktop:-right-32 desktop:bottom-0 desktop:max-h-[280px] desktop:max-w-[250px]"
           />
         </div>
       </div>
