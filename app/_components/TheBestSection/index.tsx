@@ -32,14 +32,14 @@ const TheBest = () => {
         alt="hero"
         width={500}
         height={500}
-        className="absolute bottom-14 left-10 z-0 hidden h-auto w-[calc(100%-80px)] object-contain desktop:block"
+        className="pointer-events-none absolute bottom-14 left-10 z-0 hidden h-auto w-[calc(100%-80px)] object-contain desktop:block"
       />
       <Image
         src="/images/best/bgmobile.png"
         alt="hero"
         width={500}
         height={500}
-        className="absolute left-0 top-60 z-0 h-[calc(100%-240px)] w-full object-contain desktop:hidden"
+        className="pointer-events-none absolute left-0 top-60 z-0 h-[calc(100%-240px)] w-full object-contain desktop:hidden"
       />
       <div className="space-y-8 desktop:space-y-20">
         <div className="flex flex-col items-center justify-between gap-y-8 desktop:flex-row">

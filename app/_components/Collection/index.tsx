@@ -64,11 +64,11 @@ const Collection = () => {
         </p>
       </div>
       <div className="z-10 mt-8 flex flex-col items-center desktop:items-start gap-x-20 desktop:mt-0 desktop:h-[550px] desktop:flex-row desktop:justify-between">
-        <div className="customScrollbar flex w-full items-center gap-x-4 overflow-auto px-4 pb-4 desktop:block desktop:w-[240px] desktop:min-w-[240px] desktop:overflow-hidden desktop:px-0 desktop:pb-0">
+        <div className="customScrollbar flex w-full items-center gap-x-4 overflow-auto px-4 pb-4 desktop:block desktop:w-[240px] desktop:min-w-[240px] desktop:overflow-hidden desktop:px-2 desktop:pb-4">
           {data?.map((item, index) => (
             <button
               key={index}
-              className={`${active === index ? "rounded-lg shadow-lg" : ""} flex w-full min-w-fit items-center justify-between gap-4 p-4 text-lg font-medium`}
+              className={`${active === index ? "rounded-lg shadow-lg bg-white " : ""} flex w-full min-w-fit items-center justify-between gap-4 p-4 text-lg font-medium`}
               onClick={() => setActive(index)}
             >
               <p className="flex items-center gap-2">
