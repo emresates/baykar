@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { modalData } from "./modalData";
 import { cn } from "@/app/lib/utils";

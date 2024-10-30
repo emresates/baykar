@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import Button from "../../../components/shared/button";
@@ -8,6 +9,20 @@ const Join = () => {
     "Tellus arcu sed consequat ac velit ut eu blandit.",
     "Ullamcorper ornare in et egestas dolor orci.",
   ];
+
+  const onClick = () => {
+    const iframe = document.createElement("iframe");
+    iframe.width = "720";
+    iframe.height = "480";
+    iframe.src = "https://www.youtube.com/embed/4KoueFpk1IY";
+    iframe.allowFullscreen = true;
+    iframe.className = "rounded-lg z-10 w-full h-full";
+    const removeImage = document.querySelector(".video-container img");
+    const addVideo = document.querySelector(".video");
+    removeImage?.remove();
+    addVideo?.appendChild(iframe);
+  };
+
   return (
     <div className="relative px-4 pb-14 pt-4 desktop:px-20 desktop:py-40">
       <div className="flex flex-col items-center justify-between gap-8 rounded-[30px] bg-white px-4 py-8 shadow-lg desktop:flex-row desktop:gap-20 desktop:p-20">
@@ -48,20 +63,7 @@ const Join = () => {
         <div className="video-container relative">
           <div className="relative z-10 h-[234px] w-auto desktop:h-[350px] desktop:w-[520px]">
             <button
-              onClick={() => {
-                const iframe = document.createElement("iframe");
-                iframe.width = "720";
-                iframe.height = "480";
-                iframe.src = "https://www.youtube.com/embed/4KoueFpk1IY";
-                iframe.allowFullscreen = true;
-                iframe.className = "rounded-lg z-10 w-full h-full";
-                const removeImage = document.querySelector(
-                  ".video-container img"
-                );
-                const addVideo = document.querySelector(".video");
-                removeImage?.remove();
-                addVideo?.appendChild(iframe);
-              }}
+              onClick={onClick}
               className="video inset-0 z-20 flex h-full w-full items-center justify-center"
             >
               <Image src="/images/join/video.webp" alt="Play Video" fill />
