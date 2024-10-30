@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../../../components/shared/button";
 import Image from "next/image";
+import Modal from "@/components/Modal";
 
 const ImageSection = () => {
   return (
@@ -21,7 +22,7 @@ const ImageSection = () => {
           >
             Sing up now
           </Button>
-          <p className="flex items-center gap-2">
+          {/* <p className="flex items-center gap-2">
             <Image
               src="/images/hero/play-circle.svg"
               alt="play-circle"
@@ -29,7 +30,22 @@ const ImageSection = () => {
               height={24}
             />
             Watch Demo
-          </p>
+          </p> */}
+
+          <Modal
+            modalName="watchVideo"
+            trigger={
+              <p className="flex items-center gap-2">
+                <Image
+                  src="/images/hero/play-circle.svg"
+                  alt="play-circle"
+                  width={24}
+                  height={24}
+                />
+                Watch Demo
+              </p>
+            }
+          />
         </div>
       </div>
 

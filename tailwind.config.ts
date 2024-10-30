@@ -102,6 +102,15 @@ const config: Config = {
           100: "#E2E8F0",
         },
       },
+      keyframes: {
+        frameIn: {
+          "0%": { transform: "scale(0)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
+      },
+      animation: {
+        frameIn: "frameIn 0.5s ease-out forwards",
+      },
     },
   },
   plugins: [],
