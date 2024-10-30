@@ -45,15 +45,30 @@ const Join = () => {
           height={1000}
           className="absolute bottom-0 right-0 z-0 h-[410px] w-full object-contain desktop:bottom-1/2 desktop:right-5 desktop:h-[625px] desktop:w-[713px] desktop:translate-y-1/2"
         />
-        <div className="relative">
-          <Image
-            src="/images/join/video.webp"
-            alt="check"
-            width={1000}
-            height={1000}
-            className="z-10 h-[234px] w-auto desktop:h-[350px] desktop:w-[520px]"
-          />
-          <div className="absolute bottom-3 desktop:bottom-0 left-14 desktop:left-20 aspect-square w-12 desktop:w-[85px] rounded-full bg-[#15803D]/50"></div>
+        <div className="video-container relative">
+          <div className="relative z-10 h-[234px] w-auto desktop:h-[350px] desktop:w-[520px]">
+            <button
+              onClick={() => {
+                const iframe = document.createElement("iframe");
+                iframe.width = "720";
+                iframe.height = "480";
+                iframe.src = "https://www.youtube.com/embed/4KoueFpk1IY";
+                iframe.allowFullscreen = true;
+                iframe.className = "rounded-lg z-10 w-full h-full";
+                const removeImage = document.querySelector(
+                  ".video-container img"
+                );
+                const addVideo = document.querySelector(".video");
+                removeImage?.remove();
+                addVideo?.appendChild(iframe);
+              }}
+              className="video inset-0 z-20 flex h-full w-full items-center justify-center"
+            >
+              <Image src="/images/join/video.webp" alt="Play Video" fill />
+            </button>
+          </div>
+
+          <div className="absolute bottom-3 left-14 aspect-square w-12 rounded-full bg-[#15803D]/50 desktop:bottom-0 desktop:left-20 desktop:w-[85px]"></div>
         </div>
       </div>
     </div>

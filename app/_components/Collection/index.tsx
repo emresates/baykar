@@ -40,8 +40,7 @@ const Collection = () => {
       images: ["/images/collection/images.webp"],
     },
   ];
-
-  const [active, setActive] = React.useState(0);
+  const [active, setActive] = React.useState(0); // active state
 
   return (
     <div className="relative px-4 py-12 desktop:space-y-20 desktop:p-20">
@@ -61,14 +60,17 @@ const Collection = () => {
           amet dictum pellentesque sed. Eu non turpis risus odio sapien, fames
           sit rhoncus. Nec magna sed interdum sit purus tellus. Et volutpat
           proin neque placerat at bibendum quam tellus.
+          <span className="font-semibold italic">
+            Hepsinde fotoğraf değişiyor fakat hepsinde aynı fotoğraf var.
+          </span>
         </p>
       </div>
-      <div className="z-10 mt-8 flex flex-col items-center desktop:items-start gap-x-20 desktop:mt-0 desktop:h-[550px] desktop:flex-row desktop:justify-between">
+      <div className="z-10 mt-8 flex flex-col items-center gap-x-20 desktop:mt-0 desktop:h-[550px] desktop:flex-row desktop:items-start desktop:justify-between">
         <div className="customScrollbar flex w-full items-center gap-x-4 overflow-auto px-4 pb-4 desktop:block desktop:w-[240px] desktop:min-w-[240px] desktop:overflow-hidden desktop:px-2 desktop:pb-4">
           {data?.map((item, index) => (
             <button
               key={index}
-              className={`${active === index ? "rounded-lg shadow-lg bg-white " : ""} flex w-full min-w-fit items-center justify-between gap-4 p-4 text-lg font-medium`}
+              className={`${active === index ? "rounded-lg bg-white shadow-lg" : ""} flex w-full min-w-fit items-center justify-between gap-4 p-4 text-lg font-medium`}
               onClick={() => setActive(index)}
             >
               <p className="flex items-center gap-2">
@@ -115,7 +117,7 @@ const Collection = () => {
           alt="image"
           width={760}
           height={450}
-          className="h-fit mobile:h-[500px] w-[600px] object-contain xl:h-[556px] xl:w-[944px]"
+          className="h-fit w-[600px] object-contain mobile:h-[500px] xl:h-[556px] xl:w-[944px]"
         />
       </div>
     </div>

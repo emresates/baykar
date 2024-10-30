@@ -22,16 +22,6 @@ const ImageSection = () => {
           >
             Sing up now
           </Button>
-          {/* <p className="flex items-center gap-2">
-            <Image
-              src="/images/hero/play-circle.svg"
-              alt="play-circle"
-              width={24}
-              height={24}
-            />
-            Watch Demo
-          </p> */}
-
           <Modal
             modalName="watchVideo"
             trigger={

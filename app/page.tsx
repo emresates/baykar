@@ -15,6 +15,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
+      window.scrollTo(0, 0); // Scroll to the top of the page
     }, 2000);
 
     return () => clearTimeout(timer);
